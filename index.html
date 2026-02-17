@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content"
+    />
+
+    <!-- Primary Meta Tags -->
+    <title>
+      DonJed Energy Analyst — Smart Solar & Energy Solutions for Nigeria
+    </title>
+    <meta
+      name="description"
+      content="DonJed Energy Analyst helps Nigerian homes and businesses compare solar vs generator costs, get instant solar quotes, and make smarter energy decisions with AI-powered insights."
+    />
+    <meta
+      name="keywords"
+      content="solar energy Nigeria, solar vs generator, DonJed energy, solar panels Lagos, energy savings calculator, solar installation Nigeria, renewable energy Africa"
+    />
+    <meta name="author" content="DonJed Energy Solutions" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://donjed.vercel.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://donjed.vercel.app/" />
+    <meta
+      property="og:title"
+      content="DonJed Energy Analyst — Smart Solar & Energy Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Compare solar vs generator costs, get instant solar quotes, and make smarter energy decisions with AI-powered insights."
+    />
+    <meta
+      property="og:image"
+      content="https://donjed.vercel.app/images/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta
+      property="og:image:alt"
+      content="DonJed Energy Solutions — Free Solar Quotation packages for Nigerian homes and businesses"
+    />
+    <meta property="og:site_name" content="DonJed Energy Solutions" />
+    <meta property="og:locale" content="en_NG" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://donjed.vercel.app/" />
+    <meta
+      name="twitter:title"
+      content="DonJed Energy Analyst — Smart Solar & Energy Solutions"
+    />
+    <meta
+      name="twitter:description"
+      content="Compare solar vs generator costs, get instant solar quotes, and make smarter energy decisions with AI-powered insights."
+    />
+    <meta
+      name="twitter:image"
+      content="https://donjed.vercel.app/images/og-image.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="DonJed Energy Solutions — Free Solar Quotation packages for Nigerian homes and businesses"
+    />
+    <meta name="twitter:site" content="@donjedenergy" />
+
+    <!-- Theme Color -->
+    <meta
+      name="theme-color"
+      content="#0a0a0a"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@100..900&family=Geist+Mono:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Prevent FOUC: apply theme before render -->
+    <script>
+      (function () {
+        const key = "theme-preference";
+
+        function getPreferredTheme() {
+          const stored = localStorage.getItem(key);
+          if (stored) return stored;
+          return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+
+        function applyTheme(t) {
+          const root = document.documentElement;
+          if (t === "dark") {
+            root.classList.add("dark");
+            root.classList.remove("light");
+          } else {
+            root.classList.add("light");
+            root.classList.remove("dark");
+          }
+        }
+
+        const theme = getPreferredTheme();
+        applyTheme(theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-01-10T18:00:00.000Z",
+  "totalDocuments": 3,
+  "totalChunks": 12,
+  "documents": [
+    {
+      "id": "product_magazine_chunk_0",
+      "text": "DonJed Energy Solutions - Product Catalog\n\nSolar Panel Systems:\n- 3kW Residential System: ₦1,800,000 - ₦2,200,000\n- 5kW Residential System: ₦2,500,000 - ₦3,500,000\n- 7.5kW Commercial System: ₦4,000,000 - ₦5,500,000\n- 10kW Commercial System: ₦6,000,000 - ₦8,000,000\n\nAll systems include:\n- High-efficiency solar panels (Tier 1 manufacturers)\n- Hybrid inverters with MPPT technology\n- Deep cycle batteries (Lithium or AGM options)\n- Professional installation and commissioning\n- 10-year warranty on panels, 5-year on inverters\n- Free maintenance for first year",
+      "source": "product_magazine",
+      "metadata": {
+        "fileName": "product_magazine",
+        "totalPages": 15,
+        "chunkIndex": 0
+      }
+    },
+    {
+      "id": "product_magazine_chunk_1",
+      "text": "Solar Panel Specifications:\n\nOur solar panels are sourced from top-tier manufacturers including:\n- Monocrystalline panels: 400W - 550W per panel\n- Efficiency rating: 20-22%\n- Temperature coefficient: -0.35%/°C\n- 25-year performance warranty\n- Anti-reflective coating for maximum light absorption\n- Corrosion-resistant aluminum frame\n\nInverter Options:\n- 3kW - 10kW hybrid inverters\n- Pure sine wave output\n- Built-in MPPT charge controllers\n- Grid-tie and off-grid capabilities\n- Remote monitoring via mobile app\n- Surge protection and overload protection",
+      "source": "product_magazine",
+      "metadata": {
+        "fileName": "product_magazine",
+        "totalPages": 15,
+        "chunkIndex": 1
+      }
+    },
+    {
+      "id": "product_magazine_chunk_2",
+      "text": "Battery Storage Solutions:\n\nLithium-Ion Batteries:\n- 5kWh - 20kWh capacity options\n- 6000+ cycle life\n- 95% depth of discharge\n- 10-year warranty\n- Compact and lightweight design\n- Price: ₦800,000 - ₦3,200,000\n\nAGM Deep Cycle Batteries:\n- 200Ah - 400Ah capacity\n- 3-5 year lifespan\n- Maintenance-free\n- More affordable option\n- Price: ₦150,000 - ₦400,000 per unit\n\nBattery Management System (BMS) included with all lithium batteries for optimal performance and safety.",
+      "source": "product_magazine",
+      "metadata": {
+        "fileName": "product_magazine",
+        "totalPages": 15,
+        "chunkIndex": 2
+      }
+    },
+    {
+      "id": "table_top_guide_chunk_0",
+      "text": "DonJed Solar Installation Guide\n\nSystem Sizing Guidelines:\n\nTo determine the right solar system size for your needs:\n\n1. Calculate your daily energy consumption:\n   - List all appliances and their wattage\n   - Multiply by hours of daily use\n   - Add 20% buffer for inefficiencies\n\n2. Common household loads:\n   - Air conditioner (1.5HP): 1,500W x 8 hours = 12kWh\n   - Refrigerator: 150W x 24 hours = 3.6kWh\n   - Lighting (10 bulbs): 200W x 6 hours = 1.2kWh\n   - TV and electronics: 300W x 6 hours = 1.8kWh\n   - Total example: ~19kWh per day\n\n3. Recommended system size:\n   - For 15-20kWh daily: 5kW system\n   - For 25-35kWh daily: 7.5kW system\n   - For 40-50kWh daily: 10kW system",
+      "source": "table_top_guide",
+      "metadata": {
+        "fileName": "table_top_guide",
+        "totalPages": 24,
+        "chunkIndex": 0
+      }
+    },
+    {
+      "id": "table_top_guide_chunk_1",
+      "text": "Solar Panel Performance in Different Weather:\n\nSunny Days:\n- Optimal performance at 100% capacity\n- Peak production between 10 AM - 3 PM\n- Can generate 5-6 hours of peak sunlight equivalent\n\nCloudy/Rainy Days:\n- Panels still generate 10-25% of normal capacity\n- Diffused sunlight is still usable\n- Battery backup ensures continuous power\n\nHarmattan Season:\n- Dust accumulation can reduce efficiency by 5-10%\n- Regular cleaning recommended\n- Still maintains 85-90% performance\n\nNight Time:\n- No solar generation\n- System runs on battery power\n- Automatic switching to stored energy\n\nBattery backup typically provides 1-3 days of autonomy depending on system size and usage.",
+      "source": "table_top_guide",
+      "metadata": {
+        "fileName": "table_top_guide",
+        "totalPages": 24,
+        "chunkIndex": 1
+      }
+    },
+    {
+      "id": "table_top_guide_chunk_2",
+      "text": "Installation Process:\n\n1. Site Assessment (Day 1):\n   - Roof inspection and structural analysis\n   - Shading analysis\n   - Electrical system evaluation\n   - Load calculation\n\n2. System Design (2-3 days):\n   - Custom system configuration\n   - Component selection\n   - Wiring diagram preparation\n   - Permit applications if required\n\n3. Installation (2-5 days):\n   - Mounting structure installation\n   - Solar panel installation\n   - Inverter and battery setup\n   - Electrical connections\n   - System testing and commissioning\n\n4. Training and Handover:\n   - System operation training\n   - Monitoring app setup\n   - Maintenance guidelines\n   - Warranty documentation\n\nTotal installation time: 5-10 working days from site assessment to final handover.",
+      "source": "table_top_guide",
+      "metadata": {
+        "fileName": "table_top_guide",
+        "totalPages": 24,
+        "chunkIndex": 2
+      }
+    },
+    {
+      "id": "table_top_guide_chunk_3",
+      "text": "Maintenance and Care:\n\nMonthly Maintenance:\n- Visual inspection of panels for damage or debris\n- Check battery water levels (for flooded batteries)\n- Monitor system performance via app\n- Clean panels if dusty or dirty\n\nQuarterly Maintenance:\n- Tighten all electrical connections\n- Inspect mounting hardware\n- Check inverter ventilation\n- Review energy production data\n\nAnnual Professional Service:\n- Comprehensive system inspection\n- Thermal imaging of panels\n- Battery health assessment\n- Inverter firmware updates\n- Performance optimization\n\nCleaning Tips:\n- Use soft brush or cloth with water\n- Clean early morning or evening\n- Avoid abrasive materials\n- Professional cleaning available\n\nWarranty covers all manufacturing defects. Regular maintenance ensures optimal performance and longevity.",
+      "source": "table_top_guide",
+      "metadata": {
+        "fileName": "table_top_guide",
+        "totalPages": 24,
+        "chunkIndex": 3
+      }
+    },
+    {
+      "id": "audit_questionnaire_chunk_0",
+      "text": "DonJed Energy Solutions - Customer Audit Questionnaire\n\nProperty Information:\n1. What type of property do you have?\n   - Residential (Bungalow/Duplex/Apartment)\n   - Commercial (Office/Shop/Warehouse)\n   - Industrial\n\n2. What is your roof type?\n   - Concrete flat roof\n   - Metal/Aluminum roofing\n   - Asbestos roofing\n   - Tile roofing\n\n3. Approximate roof area available for solar panels:\n   - Less than 20 square meters\n   - 20-50 square meters\n   - 50-100 square meters\n   - More than 100 square meters\n\n4. Is there significant shading on your roof?\n   - No shading\n   - Partial shading (trees, nearby buildings)\n   - Heavy shading",
+      "source": "audit_questionnaire",
+      "metadata": {
+        "fileName": "audit_questionnaire",
+        "totalPages": 8,
+        "chunkIndex": 0
+      }
+    },
+    {
+      "id": "audit_questionnaire_chunk_1",
+      "text": "Energy Consumption Assessment:\n\n1. What is your average monthly electricity bill?\n   - Less than ₦20,000\n   - ₦20,000 - ₦50,000\n   - ₦50,000 - ₦100,000\n   - More than ₦100,000\n\n2. Major appliances you want to power:\n   □ Air conditioners (How many? ___)\n   □ Refrigerator/Freezer\n   □ Water heater\n   □ Washing machine\n   □ Electric stove/oven\n   □ Microwave\n   □ TV and entertainment systems\n   □ Computers and office equipment\n   □ Lighting\n   □ Security systems\n   □ Water pumps\n\n3. What are your peak usage hours?\n   - Morning (6 AM - 12 PM)\n   - Afternoon (12 PM - 6 PM)\n   - Evening (6 PM - 12 AM)\n   - Night (12 AM - 6 AM)\n\n4. Do you experience frequent power outages?\n   - Rarely (less than 2 hours/day)\n   - Moderate (2-8 hours/day)\n   - Frequent (8-16 hours/day)\n   - Severe (more than 16 hours/day)",
+      "source": "audit_questionnaire",
+      "metadata": {
+        "fileName": "audit_questionnaire",
+        "totalPages": 8,
+        "chunkIndex": 1
+      }
+    },
+    {
+      "id": "audit_questionnaire_chunk_2",
+      "text": "System Preferences:\n\n1. What type of solar system are you interested in?\n   - Grid-tied (connected to utility grid)\n   - Off-grid (completely independent)\n   - Hybrid (both grid and battery backup)\n\n2. Battery backup requirements:\n   - No backup needed (grid-tied only)\n   - 4-8 hours backup\n   - 12-24 hours backup\n   - 2-3 days backup\n\n3. Budget range:\n   - Under ₦2,000,000\n   - ₦2,000,000 - ₦4,000,000\n   - ₦4,000,000 - ₦6,000,000\n   - Above ₦6,000,000\n\n4. Financing options interest:\n   - Full payment upfront\n   - Installment payment (3-6 months)\n   - Financing through partner banks\n\n5. Timeline for installation:\n   - Immediate (within 1 month)\n   - 1-3 months\n   - 3-6 months\n   - Just exploring options",
+      "source": "audit_questionnaire",
+      "metadata": {
+        "fileName": "audit_questionnaire",
+        "totalPages": 8,
+        "chunkIndex": 2
+      }
+    },
+    {
+      "id": "audit_questionnaire_chunk_3",
+      "text": "Additional Services:\n\n1. Are you interested in energy-efficient appliances?\n   - Yes, please provide recommendations\n   - No, I have my appliances\n\n2. Do you need electrical wiring upgrades?\n   - Yes, my wiring is old\n   - No, wiring is recent\n   - Not sure, please assess\n\n3. Monitoring and maintenance preferences:\n   - Remote monitoring with mobile app\n   - Annual maintenance contract\n   - Training for self-maintenance\n   - Full service package\n\n4. How did you hear about DonJed Energy Solutions?\n   - Referral from friend/family\n   - Online search\n   - Social media\n   - Advertisement\n   - Previous customer\n\nContact Information:\nName: _______________\nPhone: _______________\nEmail: _______________\nAddress: _______________\nBest time to contact: _______________\n\nThank you for choosing DonJed Energy Solutions. Our team will contact you within 24-48 hours to discuss your solar energy needs.",
+      "source": "audit_questionnaire",
+      "metadata": {
+        "fileName": "audit_questionnaire",
+        "totalPages": 8,
+        "chunkIndex": 3
+      }
+    }
+  ]
+}

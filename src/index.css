@@ -1,0 +1,320 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Light Theme (default) */
+  :root,
+  .light {
+    --background: 0 0% 98%; /* Off-white */
+    --foreground: 224 71% 4%; /* Dark slate */
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 140 70% 35%; /* DonJed Green (darker for light mode) */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 71.4% 4.1%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 220 14% 96%;
+    --accent-foreground: 224 71.4% 4.1%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 140 70% 35%;
+    --radius: 0.5rem;
+  }
+
+  /* Dark Theme */
+  .dark {
+    --background: 0 0% 3%; /* Near black */
+    --foreground: 0 0% 95%; /* Light gray */
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 140 70% 45%; /* DonJed Green */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 95%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 0% 18%;
+    --input: 0 0% 15%;
+    --ring: 140 70% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html,
+  body,
+  #root {
+    @apply bg-background text-foreground h-[100dvh] overflow-hidden transition-colors duration-300 ease-in-out;
+    font-family:
+      "Geist Sans",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Roboto",
+      "Oxygen",
+      "Ubuntu",
+      "Cantarell",
+      "Fira Sans",
+      "Droid Sans",
+      "Helvetica Neue",
+      sans-serif;
+  }
+  code,
+  pre {
+    font-family: "Geist Mono", "Courier New", monospace;
+  }
+}
+
+@layer utilities {
+  /* ============================================
+     NEON GREEN FLOWING LIGHT BORDER EFFECT
+     Premium AI-class input animation
+     ============================================ */
+
+  /* CSS Custom Property for rotating gradient angle */
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+  }
+
+  /* Keyframe: Rotate the gradient angle continuously */
+  @keyframes neon-flow {
+    to {
+      --border-angle: 360deg;
+    }
+  }
+
+  /* Main neon border effect class */
+  .animate-revolving-border-pseudo {
+    position: relative;
+    border: 1px solid hsl(var(--input));
+    isolation: isolate; /* Create stacking context */
+  }
+
+  /* Shared geometry and masking for both layers */
+  .animate-revolving-border-pseudo::before,
+  .animate-revolving-border-pseudo::after {
+    content: "";
+    position: absolute;
+    inset: -2px; /* Border width */
+    border-radius: inherit;
+    padding: 2px; /* Match inset/border width */
+
+    /* Strict Masking: Creates a hollow ring, preventing center glow */
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+
+    pointer-events: none;
+    will-change: transform;
+  }
+
+  /* 1. Core Light Beam (::before) */
+  .animate-revolving-border-pseudo::before {
+    /* Laser Gradient: Sharp, transparent tail, bright head */
+    background: conic-gradient(
+      from var(--border-angle),
+      transparent 0deg,
+      transparent 330deg,
+      /* Mostly transparent */ hsl(var(--primary)) 360deg
+        /* Sharp bright head */
+    );
+
+    /* Idle State: Slow, subtle */
+    animation: neon-flow 6s linear infinite;
+    opacity: 0.4;
+    z-index: 2;
+  }
+
+  /* 2. Glow/Trail (::after) */
+  .animate-revolving-border-pseudo::after {
+    /* Softer gradient for the glow/trail */
+    background: conic-gradient(
+      from var(--border-angle),
+      transparent 0deg,
+      transparent 300deg,
+      hsl(var(--primary) / 0.5) 340deg,
+      hsl(var(--primary)) 360deg
+    );
+
+    /* Matches movement but softer */
+    animation: neon-flow 6s linear infinite;
+    opacity: 0.3;
+    filter: blur(4px); /* Blur to create glow */
+    z-index: 1;
+  }
+
+  /* --- INTERACTION STATES --- */
+
+  /* Hover: Slightly brighter */
+  .animate-revolving-border-pseudo:hover:not(:focus-within)::before {
+    opacity: 0.7;
+  }
+  .animate-revolving-border-pseudo:hover:not(:focus-within)::after {
+    opacity: 0.5;
+  }
+
+  /* Focus: Active "Laser" Mode */
+  .animate-revolving-border-pseudo:focus-within::before {
+    animation-duration: 3s; /* Faster */
+    opacity: 1;
+    /* Sharper beam on focus */
+    background: conic-gradient(
+      from var(--border-angle),
+      transparent 0deg,
+      transparent 330deg,
+      hsl(var(--primary) / 0.5) 345deg,
+      hsl(var(--primary)) 360deg
+    );
+  }
+
+  .animate-revolving-border-pseudo:focus-within::after {
+    animation-duration: 3s; /* Sync speed */
+    opacity: 0.6;
+    background: conic-gradient(
+      from var(--border-angle),
+      transparent 0deg,
+      transparent 300deg,
+      hsl(var(--primary) / 0.3) 340deg,
+      hsl(var(--primary)) 360deg
+    );
+  }
+
+  /* Disabled state: Off */
+  .animate-revolving-border-pseudo:disabled::before,
+  .animate-revolving-border-pseudo:disabled::after {
+    display: none;
+  }
+
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-revolving-border-pseudo::before,
+    .animate-revolving-border-pseudo::after {
+      animation: none;
+      background: hsl(var(--border)); /* Static border fallback */
+      opacity: 0.5;
+    }
+  }
+
+  @keyframes sheen-sweep {
+    from {
+      transform: translateX(-150%);
+    }
+    to {
+      transform: translateX(150%);
+    }
+  }
+
+  .animate-sheen {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .animate-sheen::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      hsla(140, 70%, 45%, 0) 0%,
+      hsla(140, 70%, 45%, 0.1) 50%,
+      hsla(140, 70%, 45%, 0) 100%
+    );
+    transform: translateX(-150%);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .animate-sheen:hover::after {
+    animation: sheen-sweep 0.8s ease-out;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Globally hide scrollbars if requested, or apply specifically */
+  div::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+
+  /* ============================================
+     SLIDE DOWN ANIMATION FOR CHAT INPUT
+     Smooth transition when switching views
+     ============================================ */
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Fade in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+}
